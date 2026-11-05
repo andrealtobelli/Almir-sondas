@@ -33,18 +33,19 @@
 @media(min-width:901px){.nav{gap:30px;flex-wrap:nowrap}.nav a{font-size:13px}}
 
 /* FAQ: intrinsic height in both directions; no maximum height or delayed unmount. */
-.faq-item{border-bottom:1px solid #dfe9ee;transition:background-color 300ms cubic-bezier(.22,1,.36,1)}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq-item{border:1px solid #dfe9ee;border-radius:12px;transition:background-color 300ms cubic-bezier(.22,1,.36,1)}
 .faq-item:first-child{border-top:1px solid #dfe9ee}
 .faq-item.is-open{background:#eff8fc}
 .faq-question{margin:0;font-family:inherit;letter-spacing:normal;font-size:13px;font-weight:550}
-.faq-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;background:transparent;color:inherit;text-align:left;font:inherit;line-height:1.5;padding:23px 0;border:0}
+.faq-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;background:transparent;color:inherit;text-align:left;font:inherit;line-height:1.5;padding:22px 24px;border:0;border-radius:11px}
 .faq-trigger:focus-visible{outline:3px solid #1099bb;outline-offset:-3px;border-radius:4px}
 .faq-trigger svg{flex-shrink:0;color:#1682a1;transition:transform 300ms cubic-bezier(.22,1,.36,1)}
 .faq-item.is-open .faq-trigger svg{transform:rotate(180deg)}
 .faq-answer{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows 300ms cubic-bezier(.22,1,.36,1),opacity 300ms cubic-bezier(.22,1,.36,1)}
 .faq-item.is-open .faq-answer{grid-template-rows:1fr;opacity:1}
 .faq-answer-inner{min-height:0;overflow:hidden}
-.faq-answer-content{padding:0 0 23px;overflow-wrap:anywhere}
+.faq-answer-content{padding:0 24px 24px;overflow-wrap:anywhere}
 .faq-answer-content p{font-size:13px;line-height:1.75;margin:0}
-@media(max-width:760px){.faq-trigger{padding:21px 0}}
+@media(max-width:760px){.faq-trigger{padding:20px 18px}.faq-answer-content{padding:0 18px 22px}}
 @media(prefers-reduced-motion:reduce){.faq-item,.faq-trigger svg,.faq-answer{transition:none}}
